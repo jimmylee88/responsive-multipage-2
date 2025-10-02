@@ -1,0 +1,103 @@
+:root {
+    --primary-color: #4E7540;
+    --secondary-color: #FCFFFB;
+    --accent-color: #BEFFC7;
+    --tertiary-color: #344966;
+    --dark-color: #0D1821;
+    --primary-font:  'Fraunces', 'Georgia', serif;
+    --secondary-font: 'Kumbh Sans', 'Poppins', sans-serif;
+    --shadow: 0px 0px 24px rgba(0,0,0,0.3);
+}
+
+/* Smooth scroll when using nav links */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--secondary-color);
+   
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 16px 8px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.nav-links a {
+    font-size: 1.5rem;
+    color:var(--accent-color);
+    margin-right: 24px;
+}
+
+
+.logo {
+    width: 400px;
+    padding: 8px;
+    margin-left: 24px;
+}
+
+header {
+    background-color: var(--primary-color);
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    background-color: var(--primary-color);
+    padding: 40px 40px;
+}
+
+.intro-heading {
+    font-size: 6rem;
+    line-height: 6rem;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+}
+
+/* Kerning on first letter of heading */
+.intro-heading::first-letter {
+    letter-spacing: -1px;
+}
+
+.intro-subheading {
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-size: 2em;
+    font-weight: 200;
+    max-width: 600px;
+}
+
+.hero-image {
+    width: 640px;
+    height: fit-content;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+}
+
+main {
+    background-color: var(--secondary-color);
+    padding: 24px 40px;
+}
+
+.features {
+    background-color: var(--accent-color);
+    padding: 24px;
+    width: 400px;
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    color: var(--tertiary-color);
+    border-radius: 24px;
+}
+
