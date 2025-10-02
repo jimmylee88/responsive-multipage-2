@@ -6,7 +6,8 @@
     --dark-color: #0d1821;
     --primary-font:  'Fraunces', 'Georgia', serif;
     --secondary-font: 'Kumbh Sans', 'Poppins', sans-serif;
-    --shadow: 0px 0px 24px rgba(13, 24, 33, 0.5);
+    --shadow-dark: 0px 0px 24px rgba(13, 24, 33, 0.5);
+     --shadow-light: 0px 0px 16px rgba(13, 24, 33, 0.2);
 }
 
 /* Smooth scroll when using nav links */
@@ -44,7 +45,10 @@ nav {
 .logo {
     width: 400px;
     padding: 8px;
-    margin-left: 24px;
+}
+
+.logo-h {
+    display: none;
 }
 
 header {
@@ -85,10 +89,41 @@ header {
 }
 
 .hero-image {
-    width: 640px;
+    width: 720px;
     height: fit-content;
     border-radius: 30px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-dark);
+}
+
+/* Media queries for switching logo to square variant for smaller screens */
+@media screen and (max-width: 600px) {
+    .logo-h {
+        display: block;
+        width: 200px;
+    }
+    
+    .logo {
+        display: none;
+    }
+
+    .intro-heading {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .intro-subheading {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .nav-links {
+        padding-left: 16px;
+    }
+
+    .feature-text {
+        font-size: 2em;
+        line-height: 1.4em;
+    }
 }
 
 main {
@@ -96,7 +131,7 @@ main {
     padding: 24px 40px;
 }
 
-.feature-text {
+h2 {
     font-family: var(--primary-font);
     color: var(--primary-color);
     font-weight: 500;
@@ -111,11 +146,13 @@ main {
     flex-flow: row wrap;
     justify-content: center;
     gap: 32px;
+    margin-bottom: 80px;
 }
 
 .feature-card h2 {
     text-align: center;
     font-size: 3em;
+    margin-bottom: 16px;
 }
 
 .feature-card {
@@ -128,3 +165,98 @@ main {
     border-radius: 24px;
 }
 
+
+/* Fix for making the Google Maps embed responsive */
+.google-map {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 500px;
+}
+
+
+iframe {
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Required for Font Awesome icons  */
+
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.location {
+    padding: 24px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+#location-text {
+    background-color: white;
+    padding: 24px 64px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-light);
+}
+
+.address {
+    color: var(--tertiary-color);
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    margin-left: 24px;
+    text-indent: -32px;
+    margin-bottom: 24px;
+}
+
+.address::before {
+    font: var(--fa-font-solid);
+    content: "\f3c5";
+    position: relative;
+    margin-right: 16px;
+    color: var(--primary-color);
+}
+
+.open-hours {
+    color: var(--tertiary-color);
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    margin-left: 24px;
+    text-indent: -40px;
+    margin-bottom: 24px;
+}
+
+.open-hours::before {
+    font: var(--fa-font-regular);
+    content: "\f017";
+    position: relative;
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.phone {
+    color: var(--tertiary-color);
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    margin-left: 24px;
+    text-indent: -40px;
+    margin-bottom: 24px;
+}
+
+.phone::before {
+    font: var(--fa-font-solid);
+    content: "\f095";
+    position: relative;
+    margin-right: 8px;
+    color: var(--primary-color);
+}
