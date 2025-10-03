@@ -106,7 +106,15 @@ header {
     height: fit-content;
     border-radius: 30px;
     box-shadow: var(--shadow-dark);
-  
+}
+
+.hero-image-contact {
+    width: 480px;
+    /* height: fit-content; */
+    border-radius: 300px;
+    box-shadow: var(--shadow-dark);
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 /* Media queries for switching logo to square variant for smaller screens */
@@ -180,6 +188,153 @@ h2 {
     border-radius: 24px;
 }
 
+/* Contact form section */
+.contact-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 120px;
+}
+
+/* Social media icons */
+i {
+    margin-right: 16px;
+}
+
+/* Social media links in contact section */
+.contact-links  {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    color: var(--tertiary-color);
+    margin-top: 16px;
+    display: inline-block;
+}
+
+.contact-links li {
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.contact-links li:hover {
+    background-color: var(--accent-color);
+    border-radius: 200px;
+}
+
+/* Deliveroo icon in list */
+.deliveroo-dark {
+    width: "24px";
+    margin-right: 16px;
+}
+
+/* Form styling */
+.form-heading {
+    font-size: 3em;
+}
+
+#form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    gap: 32px;
+    width: 600px;
+    background-color: var(--white);
+    padding: 24px 32px;
+    border-radius: 24px;
+    border: 1px dotted var(--primary-color);
+}
+
+.form-blurb {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    color: var(--tertiary-color);
+}
+
+label {
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    color: var(--tertiary-color); 
+}
+
+input {
+    margin: 8px 0px 24px 0;
+    padding: 8px 16px;
+    width: 100%;
+    border: 2px dotted var(--primary-color);
+    border-radius: 24px;
+    background-color: var(--white);
+    font-family: var(--secondary-font);
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+} 
+
+input:focus, textarea:focus {
+    border: 2px solid var(--primary-color);
+}
+
+textarea {
+    flex-grow: 1;
+    width: 100%;
+    margin-top: 10px;
+    padding: 16px;
+    border: 2px dotted var(--primary-color);
+    border-radius: 24px;
+    resize: vertical;
+    background-color: var(--white);
+    font-family: var(--secondary-font);
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+button {
+    padding: 8px 24px;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 60px;
+    color: var(--white);
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 16px 0px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    border: 1px solid var(--primary-color);
+    color: var(--tertiary-color);
+}
+
+button:active {
+    background-color: var(--tertiary-color);
+    color: var(--accent-color);
+    scale: 0.95;
+}
+
+.disclaimer {
+    font-size: 16px;
+    font-family: var(--primary-font);
+    color: var(--tertiary-color);
+    text-align: right;
+}
+
+.disclaimer:before {
+    content: "✱";
+    margin-right: 4px;
+    font-size: 16px;
+    color:var(--primary-color);
+}
+
+/* Pseudo element for adding an asterisk to indicate which field is required */
+.email-label:after {
+    content: "✱";
+    margin-left: 8px;
+    font-size: 16px;
+    color: var(--primary-color);
+    vertical-align: top;
+}
 
 /* Fix for making the Google Maps embed responsive */
 .google-map {
@@ -329,14 +484,14 @@ footer {
     color: var(--tertiary-color);
 }
 
-
+/* Social media links in footer */
 .social-links {
     display: flex;
 }
 
 .social-links li {
     font-size: 2rem;
-    padding: 16px;
+    padding: 8px;
     color: var(--primary-color);
     transition: all 0.25s ease-in-out;
 }
